@@ -4,7 +4,9 @@ workbox.generateSW({
 cacheId: "pwa_example", 
   globDirectory : "./",
   globPatterns:[
-    "**/*.{css,js}"
+    "**/*.{css,js}",
+    "**/sw.js",
+    "node_modules/**/*"
     ],
   swDest: "./sw.js",
   runTimeCoaching: [
@@ -16,4 +18,5 @@ cacheId: "pwa_example",
         expiration:{
           maxAgeSeconds: 1800
         }
+        
       })
